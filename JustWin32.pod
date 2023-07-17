@@ -30,7 +30,9 @@ The Original GUIDeFATE was meant to be a "Quick and Dirty",  platform agmostic G
 
 Typically the UI is designed on a text-editor using monospace fonts, using + - and | characters
 and passed to the constructor as a string (C<$window> in the example below) along with an "assistance" string, thus:-
+
    my $gui=GUIDeFATE::JustWin32->new($window,"q");
+
 The assistance string can be one of:
 
 =over 4
