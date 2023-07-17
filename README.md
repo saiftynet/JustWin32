@@ -5,6 +5,8 @@ GUIDeFATE is notoriously diffficult to install, trying to make many different ba
 
 Functionality is similar to GUIDeFATE.  te Wiki there will give you an idea of how it works while I sort out simplified documentation for this.
 
+![image](https://github.com/saiftynet/JustWin32/assets/34284663/269799bf-0cf8-4be8-9f9a-93245e53932e)
+
 
 ```
 #!/usr/bin/env perl 
