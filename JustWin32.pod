@@ -45,7 +45,7 @@ for "quiet"; no outputs to the console
 
 for "verbose"; a description of the widgets identified and their IDs for future manipulation/enquiry
 
-=item "h"
+=item "a"
 
 for "help"; generate a helper file containing the perl code for all the callbacks that you may need
 
