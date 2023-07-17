@@ -82,4 +82,4 @@ Every widget has an ID which is of the format <widget type><index in the interna
 
 =item File Selectors
 
-back
+=back
