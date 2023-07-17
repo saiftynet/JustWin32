@@ -37,12 +37,26 @@ The assistance string can be one of:
 
 =over 4
 
-=item "q" for "quiet"; no outputs to the console
+=item "q"
 
-=item "v" for "verbose"; a description of the widgets identified and their IDs for future manipulation/enquiry
+for "quiet"; no outputs to the console
 
-=item "h" for "help"; generate a helper file containing the perl code for all the callbacks that you may need
+=item "v"
+
+for "verbose"; a description of the widgets identified and their IDs for future manipulation/enquiry
+
+=item "h"
+
+for "help"; generate a helper file containing the perl code for all the callbacks that you may need
 
 =back
 
-=cut
+Different backends work differently; the constructor can return the GUI object, or require a separate function to get this object. For consistency and to ease portability into other backends the GUI object containg the "frame" is invoked thus:-
+
+  my $frame=$gui->getFrame||$gui;                  # gets the UI object for future manipulation
+
+The UI then is connnected to the event loop using 
+
+  $gui->MainLoop;                                  # startsthe UI main loop. 
+
+
