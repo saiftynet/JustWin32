@@ -3,7 +3,7 @@ A stripped down version of GUIDeFATE for just using Win32::GUI in windows machin
 
 GUIDeFATE is notoriously diffficult to install, trying to make many different backends which do make things difficult for individual projects that don't need this versatility, or when dependencies are difficult to find.  Installation of dependencies (only Win32::GUI and Imager at present.
 
-Functionality is similar to GUIDeFATE.  te Wiki there will give you an idea of how it works while I sort out simplified documentation for this.
+Functionality is similar to GUIDeFATE.  The Wiki there will give you an idea of how it works while I sort out simplified [documentation](JustWin32.pod) for this.
 
 ![image](https://github.com/saiftynet/JustWin32/assets/34284663/269799bf-0cf8-4be8-9f9a-93245e53932e)
 
