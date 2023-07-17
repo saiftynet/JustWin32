@@ -58,3 +58,28 @@ The UI then is connnected to the event loop using
   $gui->MainLoop;                                  # startsthe UI main loop. 
 
 
+=head3 Widgets
+
+Every widget has an ID which is of the format <widget type><index in the internal widget list>.  The index may not be sequential as often the widgets are made of more than one widget in some backends, so an effort is made to keep the numbering consistent across platforms.  Any change of the window design will often lead to complete renumbering of the widget ID. Sorry.
+
+=over 4
+
+=item Static Text
+
+=item Single line Text Control
+
+=item Multiline Text Control
+
+=item Combo Boxes
+
+=item Buttons
+
+=item Checkboxes
+
+=item Menu
+
+=item Dialog Boxes
+
+=item File Selectors
+
+back
