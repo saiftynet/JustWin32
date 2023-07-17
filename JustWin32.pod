@@ -2,11 +2,11 @@
 
 GUIDeFATE::JustWin32
 
-=head1 Description
+=head3 Description
 
 The Original GUIDeFATE was meant to be a "Quick and Dirty",  platform agmostic GUI bulder taking advantage of whatever back end was available on the system.  As a tool that served many potential libraries, installation was frequently difficult, and some of the dependencies were themselves difficult to install.  This uses a subset of GUIDeFATE to be an easy to install utility to help GUI app.
 
-=head1 Synopsis
+=head3 Synopsis
 
   #!perl
   use strict; use warnings;
@@ -26,7 +26,7 @@ The Original GUIDeFATE was meant to be a "Quick and Dirty",  platform agmostic G
   $gui->MainLoop;                                  # startsthe UI main loop. 
 
 
-=head1 Operation
+=head3 Operation
 
 Typically the UI is designed on a text-editor using monospace fonts, using + - and | characters
 and passed to the constructor as a string (C<$window> in the example below) along with an "assistance" string, thus:-
