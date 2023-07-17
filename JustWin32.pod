@@ -47,7 +47,7 @@ for "verbose"; a description of the widgets identified and their IDs for future 
 
 =item "a"
 
-for "help"; generate a helper file containing the perl code for all the callbacks that you may need
+for "autogenerate"; generate a helper file containing the perl code for all the callbacks that you may need and ids of the UI Widgets
 
 =back
 
