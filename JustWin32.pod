@@ -19,9 +19,9 @@ The Original GUIDeFATE was meant to be a "Quick and Dirty",  platform agmostic G
 
   END
 
-  my $gui=GUIDeFATE::JustWin32->new($window,"q");  # genrates the UI
+  my $gui=GUIDeFATE::JustWin32->new($window,"q");  # geerates the UI
   my $frame=$gui->getFrame||$gui;                  # gets the UI object for future manipulation
-  $gui->MainLoop;                                  # startsthe UI main loop. 
+  $gui->MainLoop;                                  # starts the UI main loop. 
 
 
 =head3 Operation
