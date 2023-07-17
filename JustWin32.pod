@@ -1,13 +1,10 @@
 =head1 Name
-
 GUIDeFATE::JustWin32
 
 =head1 Description
-
 The Original GUIDeFATE was meant to be a "Quick and Dirty",  platform agmostic GUI bulder taking advantage of whatever back end was available on the system.  As a tool that served many potential libraries, installation was frequently difficult, and some of the dependencies were themselves difficult to install.  This uses a subset of GUIDeFATE to be an easy to install utility to help GUI app.
 
 =head1 Synopsis
-
   #!perl
   use strict; use warnings;
   use GUIDeFATE::JustWin32;    # the replacenment for use GUIDeFATE
@@ -25,3 +22,14 @@ The Original GUIDeFATE was meant to be a "Quick and Dirty",  platform agmostic G
   my $frame=$gui->getFrame||$gui;                  # gets the UI object for future manipulation
   $gui->MainLoop;                                  # startsthe UI main loop. 
 
+
+=head 1 Operation
+Typically the UI is designed on a text-editor using monospace fonts, using + - and | characters
+and passed to the constructor as a string (C<$window> in the example below) along with an "assistance" string, thus:-
+   my $gui=GUIDeFATE::JustWin32->new($window,"q");
+The assistance string can be one of:
+=over 4
+=item "q" for "quiet"; no outputs to the console
+=item "v" for "verbose"; a description of the widgets identified and their IDs for future manipulation/enquiry
+=item "h" for "help"; generate a helper file containing the perl code for all the callbacks that you may need
+=back
