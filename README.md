@@ -35,7 +35,7 @@ END
 
 my $result=0;
 my $acc="";
-my $assist="v";13:12 17/07/2023
+my $assist="v";
 my $gui= GUIDeFATE::JustWin32->new($window,$assist);
 my $frame=$gui->getFrame()||$gui;
 $gui->MainLoop();
