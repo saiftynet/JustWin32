@@ -26,7 +26,7 @@ The Original GUIDeFATE was meant to be a "Quick and Dirty",  platform agmostic G
   $gui->MainLoop;                                  # startsthe UI main loop. 
 
 
-=head 1 Operation
+=head1 Operation
 
 Typically the UI is designed on a text-editor using monospace fonts, using + - and | characters
 and passed to the constructor as a string (C<$window> in the example below) along with an "assistance" string, thus:-
