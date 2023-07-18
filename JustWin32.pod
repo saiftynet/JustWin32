@@ -66,7 +66,7 @@ Every widget has an ID which is of the format <widget type><index in the interna
 
 =item Static Text
 
-Created when text detected.  Widgets have ids in the form `stattext<id>`, and can be accessed programmatically using `$frame->{stattext<id>}`. The content can be changed using `$frame->setLabel(<id>,<newContent>)` e.g. 
+Created when text detected.  Widgets have ids in the form <Cstattext<id>>, and can be accessed programmatically using <C$frame->{stattext<id>}>. The content can be changed using <C$frame->setLabel(<id>,<newContent>)> e.g. 
 
     $frame->setLabel("stattext1", "The label has changed");
 
