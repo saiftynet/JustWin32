@@ -1,12 +1,30 @@
 # JustWin32
 A stripped down version of GUIDeFATE for just using Win32::GUI in windows machines
 
-GUIDeFATE is notoriously diffficult to install, trying to make many different backends which do make things difficult for individual projects that don't need this versatility, or when dependencies are difficult to find.  Installation of dependencies (only Win32::GUI and Imager at present.
+# Easy Install Steps
 
+1. install the latest Strawberry Perl
+2. download the .zip of this repository, extract it into your Documents directory
+
+## The Windows Way (recommended for starters)
+
+3. open Windows Explore, go to Documents/JustWin32-main
+4. double click "setup" (this will ensure the Win32::GUI module is installed)
+5. double click "calculator" (this will run the necessary Perl command)
+
+## The Commandline Way
+
+3. Open the Strawberry Perl CMD window (via Start > Programs > Strawberry Perl > Perl (commandline)
+4. "cd" to ./JustWin32-main
+5. type in "setup.bat", hit <enter> (this will ensure the Win32::GUI module is installed)
+6. type in "calculator.bat", hit <enter> (this runs the necessary Perl command)
+
+# Background Information
+
+GUIDeFATE used to be notoriously difficult to install, trying to make many different backends which do make things difficult for individual projects that don't need this versatility, or when dependencies are difficult to find.  Installation of dependencies (only Win32::GUI and Imager at present.
 Functionality is similar to GUIDeFATE.  The Wiki there will give you an idea of how it works while I sort out simplified [documentation](JustWin32.pod) for this.
 
 ![image](https://github.com/saiftynet/JustWin32/assets/34284663/269799bf-0cf8-4be8-9f9a-93245e53932e)
-
 
 ```
 #!/usr/bin/env perl 
