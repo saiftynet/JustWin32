@@ -31,7 +31,6 @@ Functionality is similar to GUIDeFATE.  The Wiki there will give you an idea of 
 #A test script that  generates a calculator style interface
 #uses GUIDeFATE::JustWin32, which is bundled with GFWin32
 #Dependencies Win32::GUI and Imager
-#This file designed to be called by Executioner for backend testing
 
 use strict;
 use warnings;
@@ -55,10 +54,10 @@ END
 
 my $result=0;
 my $acc="";
-my $assist="v";
-my $gui= GUIDeFATE::JustWin32->new($window,$assist);
-my $frame=$gui->getFrame()||$gui;
-$gui->MainLoop();
+my $assist="v";     
+my $gui= GUIDeFATE::JustWin32->new($window,$assist);   # Middle ware builds the UI
+my $frame=$gui->getFrame()||$gui;                      # the UI Object provide access to widgets
+$gui->MainLoop();                                      # Start the Appplicaton Main Loop
 
 sub textctrl0 #called using Text Control with default text '                    '
   {
