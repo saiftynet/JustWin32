@@ -109,6 +109,15 @@ sub convert{
 			$bid++;
 			$line=~s/(\[([^\]]+)\])/" " x length($1)/e;     #remove text controls replacing with spaces
 		}
+		while ($line=~m/(`([A-z0-9_]+))/){   # check boxes are backticks
+			my ($ps,$all,$content)=(length($`),$1,$2);
+			$log= "Checkbox, with id chkbox$bid with label $content calls function &chkbox$bid \n"; ##
+			if ($verbose){ print $log; }
+			if ($auto){ $autoGen.=makeSub("chkbox$bid","Check Box with label $content " ); }	
+			addWidget(["chkbox",$bid, $content,[$winScale*($ps*2-1),$winScale*$l*4], \&{"main::chkbox".$bid}]);
+			$bid++;
+			$line=~s/(`([A-z0-9_]+))/" " x length($1)/e;     #remove chkBoxes replacing with spaces
+		}
 		if ($line !~ m/^\+/){
 		  my $tmp=$line;
 		  $tmp=~s/(\[([^\]]+)\])|(\{([^}]*)\})/" " x length $1/ge;    

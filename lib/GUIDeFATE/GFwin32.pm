@@ -2,7 +2,7 @@ package GFwin32;
    use strict;
    use warnings;
    
-   our $VERSION = '0.13';
+   our $VERSION = '0.14';
    
    use Win32::GUI;
    use Imager;
@@ -71,6 +71,7 @@ package GFwin32;
 		   elsif ($wtype eq "stattext")     {aST($self, $canvas, @params);}
 		   elsif ($wtype eq "sp")           {aSP($self, $canvas, @params);}
 		   elsif ($wtype eq "combo")        {aCB($self, $canvas, @params);}
+		   elsif ($wtype eq "chkbox")       {aKB($self, $canvas, @params);}
 		   elsif ($wtype eq "sp")           {aSP($self, $canvas, @params);}
 		   elsif ($wtype eq "mb")
 		                   {
@@ -121,7 +122,7 @@ package GFwin32;
        sub aCB{  
 		   my ($self,$canvas, $id, $label, $location, $size, $action)=@_;
 		   $self->{"combo$id"}=$canvas->AddCombobox(     
-              -name        => "combo_box1",
+              -name        => "combo$id",
               -size        => $size,
               -pos         => $location,
               -dropdownlist=> 0,
@@ -131,6 +132,15 @@ package GFwin32;
 	       $iVars{"combo$id"}=$strings2[0];
 	       foreach (@strings2){ $self->{"combo$id"}->InsertItem($_);}
 
+	   }
+	   sub aKB{
+	    my ($self,$canvas, $id, $label, $location, $action)=@_;
+	    $self->{"chkbox$id"}=$canvas->AddCheckbox(
+                -name => "chkbox$id",
+                -text => $label,
+                -pos  => $location,
+                -onClick => $action, 
+        );			   
 	   }
        sub aMB{  #parses the menu items into a menu.   menus may need to be a child of main window
 	     my ($self,$canvas,$currentMenu, $id, $label, $type, $action)=@_; 
@@ -199,8 +209,22 @@ package GFwin32;
                     -size   => $size,
                  );
 			 }
-		 }
+			 elsif ($panelType eq "C"){  ##listbox
+				 if (defined $oVars{$content}){
+					my @strings2 =split(",",$oVars{$content});
+					$self->{"checklist$id"} = $frame->AddListbox(
+		              -multisel => 2,
+		              -autohscroll => 1,
+		              -autovscroll => 1,
+                      -pos    => $location,
+                      -size   => $size,
+                   );
+					$self->{"checklist$id"}->Add(@strings2)
+				}
+			}
+
 	 }
+}
 
 #functions for GUIDeFATE to load the widgets into the backend
    sub addWidget{
@@ -279,6 +303,10 @@ package GFwin32;
 #Text input functions
   sub getValue{
 	   my ($self,$id)=@_;
+	   print $id,"\n";
+	   if ( $self->{$id}&&$id=~"chkbox"){
+		   return $self->{$id}->GetCheck() ;
+	   }
 	   return $self->{$id}->Text();
 	   # function to get value of an input box
    }
